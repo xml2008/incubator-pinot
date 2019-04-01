@@ -32,7 +32,6 @@ import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.pinot.common.protocols.SegmentCompletionProtocol;
 import org.apache.pinot.common.utils.CommonConstants;
 import org.apache.pinot.common.utils.StringUtil;
-import org.apache.pinot.controller.helix.core.util.HelixSetupUtils;
 import org.apache.pinot.filesystem.LocalPinotFS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,6 +57,8 @@ public class ControllerConf extends PropertiesConfiguration {
   private static final String CONSOLE_WEBAPP_USE_HTTPS = "controller.query.console.useHttps";
   private static final String EXTERNAL_VIEW_ONLINE_TO_OFFLINE_TIMEOUT = "controller.upload.onlineToOfflineTimeout";
   private static final String CONTROLLER_MODE = "controller.mode";
+  private static final String NUMBER_OF_CONTROLLER_REPLICAS = "controller.number.replicas";
+  private static final String NUMBER_OF_PARTITIONS_IN_LEAD_CONTROLLER_RESOURCE = "controller.number.partitions";
 
   public enum ControllerMode {
     DUAL,
